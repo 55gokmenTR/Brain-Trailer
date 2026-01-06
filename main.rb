@@ -73,6 +73,35 @@ def read_color
   sleep(5)
   end
 end
+#=============Reverse_Numbers=================
+def reverse_numbers
+  numbers = (0..9).to_a.shuffle
+  puts "Memorize the numbers:"
+  puts numbers.join(" ")
+  sleep(5)
+  system("clear")
+  puts "Enter the numbers in reverse order:"
+  answer = gets.chomp.split.map(&:to_i)
+  if answer == numbers.reverse
+    puts "You Won!"
+  else
+    puts "You Lost! The correct order was: #{numbers.reverse.join(" ")}"
+  end
+end
+#==============Flash_Strings=================
+def flash_strings
+  words = (0...5).map {('a'..'z').to_a[rand(26)]}.join
+  puts words
+  sleep(0.5)
+  system("clear")
+  puts "Enter the string you saw:"
+  answer = gets.chomp
+  if answer == words
+    puts "You Won!"
+  else
+    puts "You Lost! The correct string was: #{words}"
+  end
+end
 # ----------------MAIN------------------------
 
 choose = nil
@@ -81,6 +110,8 @@ until choose == 0
   puts "1-) Shulte Table".blue
   puts "2-) Number Count".red
   puts "3-) Read Color".green
+  puts "4-) Reverse Numbers".magenta
+  puts "5-) Flash Strings".cyan
   puts "0-) Exit".yellow
 
   choose = gets.chomp.to_i
@@ -92,6 +123,10 @@ until choose == 0
     number_count
   when 3
     read_color
+  when 4
+    reverse_numbers
+  when 5
+    flash_strings
   when 0
     puts "Exiting..."
   else

@@ -18,15 +18,17 @@
 
 ## 📖 About
 
-**Brain Trailer** is a minimalist, terminal-based focus development tool designed to avoid the clutter of graphical interfaces. Built with Ruby, it aims to keep cognitive activity alive with 1-2 minute exercises during daily work breaks.
+**Brain Trailer** is a minimalist, terminal-based focus development tool designed to avoid the clutter of graphical interfaces. Built with Ruby, it aims to keep cognitive activity alive with quick exercises during daily work breaks.
 
 ## ✨ Features & Modes
 
-The application includes 3 different cognitive exercises:
+The application includes 5 different cognitive exercises:
 
 1.  **Schulte Table:** Improve visual attention and peripheral vision by finding randomly placed numbers from 1 to 25 in order.
 2.  **Number Count:** Test your focus speed by finding and counting a specific target number among random digits.
 3.  **Read Color (Stroop Test):** Challenge your cognitive flexibility by saying the **color** of the word, not the word itself (e.g., if the word <span style="color:blue">RED</span> is written in blue, you must think "Blue").
+4.  **Reverse Numbers:** Test your short-term memory by memorizing a sequence of random numbers and entering them in reverse order.
+5.  **Flash Strings:** Improve your instant perception and iconic memory by recalling a random string displayed for a split second.
 
 ## 📂 Project Structure
 
@@ -75,7 +77,7 @@ After installation, simply type the following command in your terminal:
 brain
 ```
 
-*Select the game mode (1-3) from the menu and press `Enter`.*
+*Select the game mode (1-5) from the menu and press `Enter`. To exit, select 0.*
 
 ## 🤝 Contributing
 
