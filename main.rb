@@ -51,7 +51,13 @@ def read_color
   colors = [:red, :green, :yellow, :blue, :magenta, :cyan]
   words = ["KIRMIZI", "YEŞİL", "SARI", "MAVİ", "MOR", "MAVİ"]
   game = 5
-
+  puts "Select Language"
+  puts "1-) Turkish"
+  puts "2-) English"
+  language = gets.chomp.to_i
+  if language == 2
+    words = ["RED", "GREEN", "YELLOW", "BLUE", "MAGENTA", "CYAN"]
+  end
   game.times do
     system("clear")
   2.times do
