@@ -16,6 +16,7 @@ def shulte_table
 end
 # =============NUMBER COUNT================
 def number_count
+  puts "Enter the game duration"
   game_time = gets.chomp.to_i
   target = rand(1..9)
   target_count = 0
@@ -31,24 +32,25 @@ def number_count
     puts satir.join("|")
 
   end
+  puts "Find how many #{target}'s there are in #{game_time} seconds!"
   start = Time.now
   answer = gets.chomp.to_i
   stop = Time.now
   time = game_time -(stop - start).to_i
 
-  if (time <= game_time) && (answer == target)
+  if (time <= game_time) && (answer == target_count)
     puts "You Won!"
-  elsif  (time > game_time) && (answer == target)
+  elsif  (time > game_time) && (answer == target_count)
     puts "Correct but time ran out! Elapsed time: #{time}!"
   else
-    puts "You Lost! Wrong answer"
+    puts "You Lost! Wrong answer. Doğru cevap #{target_count}"
   end
 end
 # ===============READ COLOR===================
 def read_color
   colors = [:red, :green, :yellow, :blue, :magenta, :cyan]
   words = ["KIRMIZI", "YEŞİL", "SARI", "MAVİ", "MOR", "MAVİ"]
-  game = gets.chomp.to_i
+  game = 5
 
   game.times do
     system("clear")
